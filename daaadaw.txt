@@ -1015,3 +1015,4 @@
     bcdedit /set MSI Default
     bcdedit /set usephysicaldestination No
     bcdedit /set usefirmwarepcisettings No
+    exit
