@@ -219,7 +219,6 @@ ipconfig /flushdns
 ipconfig /flushdns
 timeout 0 > nul 
 Cls
-Goto main2
 
 :2
 @ECHO ON
@@ -233,7 +232,6 @@ netsh int tcp set global timestamps=disabled
 @ECHO OFF
 ping 127.0.0.1 -n 5
 sc query BITS | find /I "STATE" | find "STOPPED"
-goto :flow2
 :flow2
 sc start BITS
 @ECHO ON
@@ -245,11 +243,9 @@ netsh int tcp set global congestionprovider=ctcp
 netsh int tcp set global ecncapability=disabled
 netsh int tcp set global timestamps=disabled
 @ECHO OFF
-goto :flow3
 :flow3
 ping 127.0.0.1 -n 5
 sc query BITS | find /I "STATE" | find "STOPPED"
-goto :LOCALSTART
 :LOCALSTART
 sc start BITS
 @ECHO ON
@@ -260,11 +256,9 @@ netsh int tcp set global autotuninglevel=normal
 netsh int tcp set global congestionprovider=ctcp
 netsh int tcp set global ecncapability=disabled
 netsh int tcp set global timestamps=disabled
-goto main2
 
 :3
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*SpeedDuplex" /t REG_SZ /d "1" /f
-goto main2    
 
 @ECHO OFF
     netsh int tcp set global chimney=enable
@@ -878,7 +872,6 @@ goto main2
     Pause & Exit
     )
     Cls
-    goto:eof
     Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces" /v "MTU" /t REG_DWORD /d "2927" /f
     color 04
     Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces" /v "MSS" /t REG_DWORD /d "2927" /f
@@ -1156,7 +1149,6 @@ goto main2
     regedit /s SG_Vista_TcpIp_Patch.reg
     del SG_Vista_TcpIp_Patch.reg
     CLS
-    goto:exit
 
     color 4
     @echo off
