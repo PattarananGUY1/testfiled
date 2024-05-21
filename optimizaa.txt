@@ -1,0 +1,27 @@
+wmic process where name="svchost.exe" CALL setpriority "64"
+wmic process where name="csrss.exe" CALL setpriority "64"
+wmic process where name="dllhost.exe" CALL setpriority "64"
+wmic process where name="NisSrv.exe" CALL setpriority "64"
+wmic process where name="FiveM_b2545_GTAProcess.exe" CALL setpriority "256"
+wmic process where name="FiveM_b2699_GTAProcess.exe" CALL setpriority "256"
+wmic process where name="FiveM_b2189_GTAProcess.exe" CALL setpriority "256"
+wmic process where name="FiveM_b2372_GTAProcess.exe" CALL setpriority "256"
+wmic process where name="FiveM_GTAProcess.exe" CALL setpriority "256"
+wmic process where name="FiveM.exe" CALL setpriority "256"
+wmic process where name="FiveM_ChromeBrowser" CALL setpriority "256"
+wmic process where name="FiveM_SteamChild.exe" CALL setpriority "256"
+wmic process where name="FiveM_DumpServer" CALL setpriority "256"
+wmic process where name="FiveM_b2699_DumpServer" CALL setpriority "256"
+wmic process where name="FiveM_ROSService" CALL setpriority "256"
+wmic process where name="FiveM_ROSLauncher" CALL setpriority "256"
+@echo off			
+
+:0KB METHOD
+echo 0KB START ... 
+ping 127.0.0.1 -n 2
+
+sc query BITS | find /I "STATE" | find "STOPPED"
+
+:start
+sc start BITS
+goto :0KB METHOD
