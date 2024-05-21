@@ -19,9 +19,15 @@ wmic process where name="FiveM_ROSLauncher" CALL setpriority "256"
 :0KB METHOD
 echo 0KB START ... 
 ping 127.0.0.1 -n 2
-
+ping 127.0.0.1 -n 2
+ping 127.0.0.1 -n 2
+ping 127.0.0.1 -n 2
+ping 127.0.0.1 -n 2
+ping 127.0.0.1 -n 2
+ping 127.0.0.1 -n 2
+ping 127.0.0.1 -n 2
+ping 127.0.0.1 -n 2
 sc query BITS | find /I "STATE" | find "STOPPED"
-
 :start
 sc start BITS
 goto :0KB METHOD
