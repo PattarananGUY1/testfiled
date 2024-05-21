@@ -1,38 +1,272 @@
-::[Bat To Exe Converter]
-::
-::YAwzoRdxOk+EWAnk
-::fBw5plQjdG8=
-::YAwzuBVtJxjWCl3EqQJgSA==
-::ZR4luwNxJguZRRnk
-::Yhs/ulQjdF+5
-::cxAkpRVqdFKZSDk=
-::cBs/ulQjdF+5
-::ZR41oxFsdFKZSDk=
-::eBoioBt6dFKZSDk=
-::cRo6pxp7LAbNWATEpCI=
-::egkzugNsPRvcWATEpCI=
-::dAsiuh18IRvcCxnZtBJQ
-::cRYluBh/LU+EWAnk
-::YxY4rhs+aU+JeA==
-::cxY6rQJ7JhzQF1fEqQJQ
-::ZQ05rAF9IBncCkqN+0xwdVs0
-::ZQ05rAF9IAHYFVzEqQJQ
-::eg0/rx1wNQPfEVWB+kM9LVsJDGQ=
-::fBEirQZwNQPfEVWB+kM9LVsJDGQ=
-::cRolqwZ3JBvQF1fEqQJQ
-::dhA7uBVwLU+EWDk=
-::YQ03rBFzNR3SWATElA==
-::dhAmsQZ3MwfNWATElA==
-::ZQ0/vhVqMQ3MEVWAtB9wSA==
-::Zg8zqx1/OA3MEVWAtB9wSA==
-::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDB5aDimM3y0Crod7PvH28KyjGk4Zqw6YIq7
-::YB416Ek+ZG8=
-::
-::
-::978f952a14a936cc963da21a135fa983
 
-    @ECHO OFF
+
+:1
+color 04
+netsh winsock reset catalog
+netsh int tcp reset
+netsh interface ip delete arpcache
+netsh int tcp set heuristics disabled
+netsh int tcp set global rss=enabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global netdma=enabled
+netsh int tcp set global dca=enabled
+netsh int tcp set supplemental template=custom icw=10
+netsh int tcp set supplemental congestionprovider=ctcp
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global autotuninglevel=disabled
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global initialRto=2000
+netsh int tcp set global rsc=disabled
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set global maxsynretransmissions=2
+netsh int tcp set global fastopen=enabled
+netsh interface ipv4 set interface "Ethernet" metric=70
+netsh interface ipv4 set interface "Ethernet" mtu=1500
+netsh interface ipv6 set interface "Ethernet" metric=70
+netsh interface ipv6 set interface "Ethernet" mtu=1500
+netsh int ipv4 set glob defaultcurhoplimit=255
+netsh int ipv6 set glob defaultcurhoplimit=255
+netsh interface ipv4 set subinterface "Ethernet" mtu=1500 store=persistent
+netsh interface ipv4 set subinterface "Wi-Fi" mtu=1500 store=persistent
+netsh int tcp set global maxsynretransmissions=8
+netsh int tcp set global rss=enabled
+netsh interface ipv4 set subinterface "Ethernet" mtu=1640 store=persistent
+netsh int tcp set heuristics disabled
+netsh int tcp set global netdma=enabled
+netsh int tcp set global dca=enabled
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global chimney=enabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+netsh int tcp show global
+netsh interface tcp set heuristics disabled
+netsh interface tcp set global autotuning=restricted
+netsh interface ip delete arpcache
+netsh int tcp set global netdma=enabled
+netsh int tcp set global dca=enabled
+netsh int ipv4 set glob defaultcurhoplimit=64
+netsh int ipv6 set glob defaultcurhoplimit=64
+set supplemental congestionprovider=ctcp
+netsh int tcp set heuristics disabled
+netsh int tcp set global rss=enabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global rsc=disabled
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set global maxsynretransmissions=2
+netsh int tcp set global fastopen=enabled
+netsh interface tcp set global ecncapability=disabled
+netsh int tcp set global autotuninglevel=restricted
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global initialRto=2000
+netsh int tcp set global rsc=enabled
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global rsc=enabled
+cls
+netsh int tcp set global ecncapability=disabled
+cls
+netsh int tcp set global autotuninglevel=disabled
+cls
+netsh int tcp set heuristics disabled
+cls
+netsh int tcp set global chimney=disabled
+cls
+netsh int tcp set global dca=enabled
+cls
+netsh int tcp set global rss=enabled
+cls
+netsh int tcp set global netdma=enabled
+cls
+netsh int tcp set global congestionprovider=ctcp
+cls
+netsh int tcp set global timestamps=disabled
+cls
+netsh int tcp set global nonsackrttresiliency=disabled
+cls
+netsh int tcp set supplemental template=custom icw=10
+cls 
+netsh int tcp set heuristics disabled
+cls
+netsh int tcp set global rss=enabled
+cls
+netsh int tcp set global chimney=enabled
+cls
+netsh int tcp set global autotuninglevel=normal
+cls
+netsh int tcp set global congestionprovider=ctcp
+cls
+netsh int tcp set global ecncapability=disabled
+cls
+netsh int tcp set global timestamps=disabled
+cls
+netsh int tcp set heuristics disabled
+cls
+netsh int tcp set global autotuninglevel=disabled
+cls
+netsh int tcp set global congestionprovider=ctcp
+cls
+netsh int tcp set global rss=enabled
+cls
+netsh int tcp set global chimney=enabled
+cls
+netsh int tcp set global dca=enabled
+cls
+netsh interface ipv4 set subinterface "Wireless Network Connection" mtu=1500 store=persistent
+cls
+netsh int tcp set global netdma=enabled
+cls
+netsh int tcp set global timestamps=disabled
+cls
+netsh int tcp set global nonsackrttresiliency=disabled
+cls
+netsh int tcp set supplemental template=custom icw=10
+cls
+netsh int tcp set global fastopen=enabled
+cls
+netsh int tcp set heuristics disabled
+cls
+netsh int tcp set global rss=enabled
+cls
+netsh int tcp set global chimney=enabled
+cls
+netsh int tcp set global autotuninglevel=normal
+cls
+netsh int tcp set global congestionprovider=ctcp
+cls
+netsh int tcp set global ecncapability=disabled
+cls
+netsh int tcp set global timestamps=disabledstart cmd.exe /k ping  127.0.0.1  -t -l-n 65000
+cls
+netsh int tcp set global congestionprovider=none
+cls
+netsh int tcp set global autotuninglevel=high
+cls
+netsh int tcp set global chimney=disabled
+cls
+netsh int tcp set global dca=enable
+cls
+netsh int tcp set global netdma=enable
+cls
+netsh int tcp set heuristics enable
+cls
+netsh int tcp set global rss=enabled
+cls
+netsh int tcp set global timestamps=enable
+cls
+netsh interface tcp set global rss=enabled chimney=automatic netdma=disabled dca=disabled autotuninglevel=normal
+cls
+netsh interface tcp set global congestionprovider=none ecncapability=disabled timestamps=disabled 
+cls
+netsh interface tcp set global initialrto=3000
+cls
+netsh interface ipv4 set subinterface "Internet" mtu=80 store=persistent
+cls
+netsh interface ipv4 set subinterface "Ethernet" mtu=80 store=persistent
+cls
+netsh interface tcp set global autotuning=normal
+cls
+netsh int tcp set global congestionprovider=none
+cls
+netsh int tcp set global autotuninglevel=high
+cls
+netsh int tcp set global chimney=disabled
+cls
+netsh interface ipv4 set subinterface "Local Area Connection" mtu=150 store=persistent
+cls
+netsh int tcp set global rss=default
+cls
+netsh int tcp set heuristics disabled
+cls
+netsh interface ipv4 set subinterface "Local Area Connection" mtu=4000 store=persistent
+cls
+netsh interface ipv4 set subinterface "Internet" mtu=4000 store=persistent
+cls
+netsh interface ipv4 set subinterface "Ethernet" mtu=5000 store=persistent
+cls
+netsh int tcp set global congestionprovider=none
+cls
+netsh int tcp set global autotuninglevel=high
+cls	
+netsh int tcp set global chimney=disabled
+cls
+netsh int tcp set global dca=enable
+cls
+netsh int tcp set global netdma=enable
+cls
+netsh int tcp set heuristics enable
+cls
+netsh int tcp set global rss=enabled
+cls
+netsh int tcp set global timestamps=enable
+netsh int tcp set global autotuninglevel=disabled
+netsh int tcp set heuristics disabled
+netsh int tcp set global chimney=disabled
+netsh int tcp set global dca=enabled
+netsh int tcp set global rss=enabled
+netsh int tcp set global netdma=enabled
+netsh int tcp set global congestionprovider=ctcp
+netsh int tcp set global timestamps=disabled
+netsh int tcp set global nonsackrttresiliency=disabled
+netsh int tcp set supplemental template=custom icw=8,5
+netsh int tcp show global
+netsh int tcp set global chimney=enabled
+netsh int tcp set heuristics disabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+ipconfig /flushdns
+ipconfig /flushdns
+timeout 0 > nul 
+Cls
+Goto main2
+
+:2
+@ECHO ON
+netsh int tcp set heuristics disabled
+netsh int tcp set global rss=enabled
+netsh int tcp set global chimney=enabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global timestamps=disabled
+@ECHO OFF
+ping 127.0.0.1 -n 5
+sc query BITS | find /I "STATE" | find "STOPPED"
+goto :flow2
+:flow2
+sc start BITS
+@ECHO ON
+netsh int tcp set heuristics disabled
+netsh int tcp set global rss=enabled
+netsh int tcp set global chimney=enabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global timestamps=disabled
+@ECHO OFF
+goto :flow3
+:flow3
+ping 127.0.0.1 -n 5
+sc query BITS | find /I "STATE" | find "STOPPED"
+goto :LOCALSTART
+:LOCALSTART
+sc start BITS
+@ECHO ON
+netsh int tcp set heuristics disabled
+netsh int tcp set global rss=enabled
+netsh int tcp set global chimney=enabled
+netsh int tcp set global autotuninglevel=normal
+netsh int tcp set global congestionprovider=ctcp
+netsh int tcp set global ecncapability=disabled
+netsh int tcp set global timestamps=disabled
+goto main2
+
+:3
+Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001" /v "*SpeedDuplex" /t REG_SZ /d "1" /f
+goto main2    
+
+@ECHO OFF
     netsh int tcp set global chimney=enable
     netsh int tcp set global autotuninglevel=disabled
     netsh int tcp set global ecncapability=disabled
