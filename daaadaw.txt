@@ -864,13 +864,6 @@ Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc
     Reg.exe add "HKCU\Control Panel\Accessibility\MouseKeys" /v "Flags" /t REG_SZ /d "100" /f
     Reg.exe add "HKCU\Control Panel\Accessibility\MouseKeys" /v "MaximumSpeed" /t REG_SZ /d "50000" /f
     Reg.exe add "HKCU\Control Panel\Accessibility\MouseKeys" /v "TimeToMaximumSpeed" /t REG_SZ /d "30000" /f
-    Exit
-    :IsAdmin
-    Reg.exe query "HKU\S-1-5-19\Environment"
-    If Not %ERRORLEVEL% EQU 0 (
-    Cls & Echo You must have administrator rights to continue ... 
-    Pause & Exit
-    )
     Cls
     Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces" /v "MTU" /t REG_DWORD /d "2927" /f
     color 04
